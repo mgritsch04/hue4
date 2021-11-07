@@ -5,10 +5,31 @@
  */
 package net.htlgkr.mgritsch19.bsp2;
 
+import java.util.concurrent.Callable;
+
 /**
  *
  * @author maxim
  */
-public class Task {
+public class Task implements Callable<Integer> {
+
+    private int untergrenze;
+    private int obergrenze;
+
+    public Task(int untergrenze, int obergrenze) {
+        this.untergrenze = untergrenze;
+        this.obergrenze = obergrenze;
+    }
+
+    @Override
+    public Integer call() {
+
+        int erg = 0;
+        for (int i = untergrenze; i < obergrenze; i++) {
+            erg += i;
+        }
+
+        return erg;
+    }
 
 }
