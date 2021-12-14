@@ -53,17 +53,8 @@ public class Main {
                 Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-        System.out.print("Gesamtsumme: ");
-        for (int i = 0; i < listSum.size(); i++) {
-            if (i == 0) {
-                System.out.print(listSum.get(i));
-            } else if (i == listSum.size() - 1) {
-                System.out.print(" + " + listSum.get(i) + " = " + sum);
-            } else {
-                System.out.print(" + " + listSum.get(i));
-            }
+        System.out.print("Gesamtsumme: " + sum);
 
-        }
         System.out.println("");
         System.out.println("Summe laut gaußsche Summenformel: " + (((obergrenze * obergrenze) + obergrenze) / 2));
         executor.shutdown();

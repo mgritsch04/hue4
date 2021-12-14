@@ -44,8 +44,8 @@ public class Main {
         int index = 0;
 
         while (index < list.size()) {
-            Task task = new Task(list.subList(index, Math.min((int) (index + anzahlTeile), list.size())), teiler);
-            executor.execute(task);
+            Task t = new Task(list.subList(index, Math.min((int) (index + lengthOneList), list.size())), teiler);
+            executor.execute(t);
             if (index + lengthOneList > list.size()) {
                 index += list.size() - index;
             } else {
